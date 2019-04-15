@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="placemark.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="container" id="map">
+           <div class="title-block">Выберите<br> участок</div>
+    </div>
+</body>
+
+
+
+<script> 
+ymaps.ready(init);
+
+function init() {
+    var myMap = new ymaps.Map("map", {
+            center: [45.033305, 38.964973],
+            zoom: 16,
+            controls: [] 
+        }, {
+            searchControlProvider: 'yandex#search'
+        });
+
+    // Создаем геообъект с типом геометрии "Точка".
+  
+
+    myMap.geoObjects
+     
+
+        .add(new ymaps.Placemark([45.033305, 38.964973], { 
+            hintContent: 'Кубань Радикал - Лазерное оборудование', 
+            balloonContent: '<b>Кубань Радикал - Лазерное оборудование</b>, <br>РФ, 350007, г. Краснодар, ул. Захарова, 1 к21-22, Станкостроительный завод им. Седина , <br>laser@kubanradikal.ru, <br>8 (960) 481-83-39<br>8 (952) 85-60-800<br>8 (918) 462-19-53<br>' 
+            }, { 
+            // Опции. 
+            // Необходимо указать данный тип макета. 
+            iconLayout: 'default#image', 
+            // Своё изображение иконки метки. 
+            iconImageHref: 'img/placemark.png', 
+            // Размеры метки. 
+            iconImageSize: [44, 57], 
+            // Смещение левого верхнего угла иконки относительно 
+            // её "ножки" (точки привязки). 
+            iconImageOffset: [-13, -48] 
+            }))     
+}
+
+</script>
+</html>

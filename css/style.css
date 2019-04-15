@@ -1,0 +1,437 @@
+body{
+	margin: 0;
+	padding: 0;
+    background: #e6e6e6;
+}
+
+/* Подключение шрифтов*/
+
+@font-face {
+    font-family: "DinPro-Black"; 
+    src: url("../fonts/DINPRO-BLACK_0.otf")  format("opentype"); 
+}
+@font-face {
+    font-family: "DinPro-Bold"; 
+    src: url("../fonts/DINPRO-BOLD_0.otf")  format("opentype"); 
+}
+@font-face {
+    font-family: "DinPro-Light"; 
+    src: url("../fonts/DINPRO-LIGHT_0.otf")  format("opentype"); 
+}
+@font-face {
+    font-family: "DinPro-Medium"; 
+    src: url("../fonts/DINPRO-MEDIUM_0.otf")  format("opentype"); 
+}
+@font-face {
+    font-family: "DinPro-Regular"; 
+    src: url("../fonts/DINPRO-REGULAR.otf")  format("opentype"); 
+}
+
+/* Индексная страница*/
+
+.container-index{
+    width: 100%;
+    height: 100%;
+    background: url('../img/index-bg.gif');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: fixed;
+}
+
+.nav-wrap{
+    background: #e6e6e6;
+    width: 325px;
+    height: 250px;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px;
+    position: absolute;
+    left: 5%;
+    top: 12%;
+}
+
+.project-name{
+    border: none;
+    background: #e6e6e6;
+    font-size:72px;
+    font-family: "DinPro-Bold";
+    width: 100%;
+}
+
+.project-name:focus{
+    outline: none;
+}
+
+.nav-btn{
+    font-family: "DinPro-Bold";
+    font-style: italic;
+    font-size: 18px;
+    color:#77b6a5;
+    text-transform: initial;
+}
+
+#nav-prev{
+    float: left;
+}
+#nav-next{
+    float: right;
+}
+
+/* Выбор области*/
+
+.container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+[class*="ymaps-2"][class*="-ground-pane"] {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+    /* Firefox 3.5+ */
+    -webkit-filter: grayscale(100%);
+    /* Chrome 19+ & Safari 6+ */
+}
+
+.title-block{
+    font-family: "DinPro-Bold";
+    font-size: 36px;
+    text-transform: uppercase;
+    position: absolute;
+    z-index: 90;
+    left: 5%;
+    top: 5%;
+}
+
+/* Выбор этажа*/
+
+#floor{
+    background: url('../img/bg-screen3.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    
+}
+
+.title-block-other{
+    font-family: "DinPro-Bold";
+    font-size: 36px;
+    text-transform: uppercase;
+    position: absolute;
+    z-index: 90;
+    left: 5%;
+    top: 10%;
+}
+
+.nav-wrap-other{
+    position: absolute;
+    z-index: 90;
+    left: 5%;
+    top: 13%;
+}
+
+.description-block{
+    font-family: "DinPro-Bold";
+    font-size: 18px;
+    z-index: 90;
+    margin: 20px 0;
+    text-transform: initial;
+    width:350px;
+}
+
+.floors-wrap{
+    position: absolute;
+    right: 20%;
+    top: 10%;
+}
+
+.floor-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+
+.floor-img-wrap{
+ 
+    -o-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+}
+
+.floor-img{
+    width: 340px;
+    height: 170px;
+    background: url(../img/floor1.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    -o-transform: skewX(55deg);
+    -ms-transform: skewX(55deg);
+    -moz-transform: skewX(55deg);
+    -webkit-transform: skewX(55deg);
+    transform: skewX(55deg);
+}
+
+.floor-num{
+    margin-left: 50px;
+    font-family: "DinPro-Light"; 
+    font-size: 24px;
+    color:#6a6a6a;
+    position: relative;
+    left: 130px;
+    top:30px;
+}
+
+.filling{
+    width: 100%;
+    height: 100%;
+}
+
+.filling:hover{
+    background: rgba(243, 159, 145, 0.7);
+}
+
+#floor-7{
+    z-index: 99;
+}
+#floor-6{
+    z-index: 98;
+    top: -105px;
+}
+#floor-5{
+    z-index: 97;
+    top: -205px;
+}
+#floor-4{
+    z-index: 96;
+    top: -305px;
+}
+#floor-3{
+    z-index: 95;
+    top: -405px;
+}
+#floor-2{
+    z-index: 94;
+    top: -505px;
+}
+#floor-1{
+    z-index: 93;
+    top: -605px;
+}
+
+/* Выбор комнаты*/
+
+.room-container{
+    position: relative;
+    top: 20%;
+    right: 20%;
+    float: right;
+}
+
+
+/* Конструктор комнаты */
+
+.constructor-container{
+    position: relative;
+    top: 5%;
+    right: 35%;
+    float: right;
+    display:flex;
+}
+
+.bx-prev{
+    background: url(../img/arrow-prev.png) !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    left:60px !important;
+    top:280px !important;
+}
+
+.bx-next{
+    background: url(../img/arrow-next.png) !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    left:60px !important;
+    top:465px !important;
+}
+
+.first-block{
+    width: 109px;
+    height: 150px;
+}
+
+.first-block img{
+    position: absolute;
+    right: 0;
+}
+
+.second-block{
+    height: 150px;
+    width: 21px;
+}
+
+.bx-wrapper{
+    border: none !important;
+    background: none !important;
+    box-shadow: none !important;
+}
+
+.bx-wrapper, .bx-viewport{height: 750px !important;}
+
+.second > .bx-wrapper > .bx-controls > .bx-controls-direction > .bx-prev{
+    left:-5px !important;
+}
+
+.second > .bx-wrapper > .bx-controls > .bx-controls-direction > .bx-next{
+    left:-5px !important;
+}
+
+.three-block{
+    height: 150px;
+    width: 60px;
+}
+
+.three > .bx-wrapper > .bx-controls > .bx-controls-direction > .bx-prev{
+    left:15px !important;
+}
+
+.three > .bx-wrapper > .bx-controls > .bx-controls-direction > .bx-next{
+    left:15px !important;
+}
+
+.four-block{
+    height: 150px;
+    width: 134px;
+}
+
+.four > .bx-wrapper > .bx-controls > .bx-controls-direction > .bx-prev{
+    left:50px !important;
+}
+
+.four > .bx-wrapper > .bx-controls > .bx-controls-direction > .bx-next{
+    left:50px !important;
+}
+
+.five-block{
+    height: 150px;
+    width: 51px;
+}
+
+.five > .bx-wrapper > .bx-controls > .bx-controls-direction > .bx-prev{
+    left:10px !important;
+}
+
+.five > .bx-wrapper > .bx-controls > .bx-controls-direction > .bx-next{
+    left:10px !important;
+}
+
+.six-block{
+    height: 150px;
+    width: 130px;
+}
+
+.six > .bx-wrapper > .bx-controls > .bx-controls-direction > .bx-prev{
+    left:50px !important;
+}
+
+.six > .bx-wrapper > .bx-controls > .bx-controls-direction > .bx-next{
+    left:50px !important;
+}
+
+.result-container{
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    float: right;
+    display:flex;
+    width:300px;
+}
+
+.price-block{
+    font-size: 14px;
+    font-family: "DinPro-Bold";
+    text-transform: lowercase;
+}
+
+.description-block ul li{
+    list-style: none;
+}
+
+.contur{
+    background: url(../img/contur.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 505px;
+    height: 750px;
+    position: absolute;
+    z-index: 999;
+}
+.plan-wrap{
+    position: absolute;
+    margin-top: 35%;
+}
+
+.constructor-min-wrap{
+    position: absolute;
+    margin-top: 120%;
+}
+
+
+/* Результат сборки квартиры*/
+
+.result-room{
+    top:10%;
+    right: 38%;
+}
+
+.contacts-block{
+    margin-top: 60px;
+    font-family: "DinPro-Light"; 
+    font-size:18px;
+    color:#949494;
+    width: 350px;
+    text-transform: initial;
+    font-style: italic;
+    margin-bottom: 40px;
+}
+
+.text-column{
+    display: flex;
+    right:10%;
+}
+
+.column{
+    font-size: 18px;
+    font-family: "DinPro-Light"; 
+    color:#f09283;
+    width: 320px;
+    margin: 0 20px;
+}
+
+@media (max-width: 1366px) {
+    .room-container{
+        right: 5%;
+    }
+    .constructor-container{
+        right: 27%;
+    }
+    .result-container{
+        right:0;
+    }
+    .text-column{
+        right:0%;
+    }
+    .column{
+        font-size: 15px;
+        font-family: "DinPro-Light"; 
+        color:#f09283;
+        width: 250px;
+        margin: 0 10px;
+    }
+}
+
